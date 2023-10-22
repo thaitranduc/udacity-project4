@@ -4,3 +4,43 @@ Port: 8000
     20.35373177134412
   ]
 }
+
+Thai-Desktop@Thai-Desktop MINGW64 ~/Documents/GitHub/udacity-project4 (main)
+$ ./run_docker.sh
+[+] Building 43.1s (10/10) FINISHED                                                                                                                                                                                                                                  docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                                                                                                                           0.1s
+ => => transferring dockerfile: 471B                                                                                                                                                                                                                                           0.0s 
+ => [internal] load .dockerignore                                                                                                                                                                                                                                              0.1s 
+ => => transferring context: 2B                                                                                                                                                                                                                                                0.0s 
+ => [internal] load metadata for docker.io/library/python:3.7.3-stretch                                                                                                                                                                                                        5.0s 
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                                                                                                                                                  0.0s
+ => [1/4] FROM docker.io/library/python:3.7.3-stretch@sha256:205cafadbb7f0c48f2a6d655eb100a9675aa85e6e73958860f488406cce09779                                                                                                                                                  0.0s
+ => [internal] load build context                                                                                                                                                                                                                                             14.2s 
+ => => transferring context: 262.28MB                                                                                                                                                                                                                                         14.1s 
+ => CACHED [2/4] WORKDIR /app                                                                                                                                                                                                                                                  0.0s
+ => [3/4] COPY . /app                                                                                                                                                                                                                                                          3.1s 
+ => [4/4] RUN pip install --upgrade --no-cache-dir pip && pip install --no-cache-dir -r requirements.txt                                                                                                                                                                      19.3s
+ => exporting to image                                                                                                                                                                                                                                                         1.3s
+ => => exporting layers                                                                                                                                                                                                                                                        1.3s
+ => => writing image sha256:b2ba9b7237c08800cf3e8234f77b8c61b9706b6ab4a06850c59dbc59fffc9969                                                                                                                                                                                   0.0s
+ => => naming to docker.io/library/udacity-project4:1.0.0                                                                                                                                                                                                                      0.0s
+
+$ docker logs 5f31cb7657b3
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 436-461-047
+[2023-10-22 18:21:00,758] INFO in app: JSON payload:
+{json_payload}
+[2023-10-22 18:21:00,759] INFO in app: Inference payload DataFrame:
+{inference_payload}
+[2023-10-22 18:21:00,760] INFO in app: Scaling Payload:
+{payload}
+[2023-10-22 18:21:00,761] INFO in app: the scaled input: {scaled_payload}
+[2023-10-22 18:21:00,761] INFO in app: The resultant prediction: {prediction}
+172.17.0.1 - - [22/Oct/2023 18:21:00] "POST /predict HTTP/1.1" 200 -

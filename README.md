@@ -1,6 +1,6 @@
 <include a CircleCI status badge, here>
 # Template:
-[![thaitranduc](https://circleci.com/gh/thaitranduc/udacity-project4.svg?style=svg)](<LINK>)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/thaitranduc/udacity-project4/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/thaitranduc/udacity-project4/tree/main)
 
 
 ## Project Overview
@@ -35,19 +35,33 @@ python3 -m pip install --user virtualenv
 # Check the Python path using `which python3`
 # Use a command similar to this one:
 python3 -m virtualenv --python=<path-to-Python3.7> .devops
-source .devops/bin/activate
+.devops\Scripts\activate.ps1
 ```
-* Run `make install` to install the necessary dependencies
+
+* I used Powershell for running command
+.devops/Scripts/activate.ps1
 
 ### Running `app.py`
-
+* I used Gitbash for running below command
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+* Alternative Powershell for running below command
+1. Standalone:  `python app.py`
+2. Run in Docker:  `bash run_docker.sh`
+3. Run in Kubernetes:  `bash run_kubernetes.sh`
 
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
+Download docker desktop
+docker --version
+
 * Setup and Configure Kubernetes locally
+Run command minikube start
+
 * Create Flask app in Container
+
 * Run via kubectl
+kubectl get pod
+kubectl logs pod
