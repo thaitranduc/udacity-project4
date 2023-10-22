@@ -1,4 +1,7 @@
 <include a CircleCI status badge, here>
+# Template:
+[![thaitranduc](https://circleci.com/gh/thaitranduc/udacity-project4.svg?style=svg)](<LINK>)
+
 
 ## Project Overview
 
