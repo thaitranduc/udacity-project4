@@ -5,13 +5,6 @@ Port: 8000
   ]
 }
 
-
-Thai-Desktop@Thai-Desktop MINGW64 ~/Documents/GitHub/udacity-project4 (main)
-$ ./make_prediction.sh > kubernetes_out.txt
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100   260  100    48  100   212   2641  11667 --:--:-- --:--:-- --:--:-- 15294
-
 NAME                                READY   STATUS    RESTARTS   AGE
 udacity-project4-77dcc6b846-c5l47   1/1     Running   0          10s
 Forwarding from 127.0.0.1:8000 -> 80
