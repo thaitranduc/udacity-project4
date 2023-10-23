@@ -5,12 +5,13 @@
 
 # Step 1:
 # Create docker_path
-docker_path=noriyasuchin2606
+docker_path=noriyasuchin2606/udacity-project4
 
 # Step 2:  
 # Authenticate & tag
-docker image tag udacity-project4:1.0.0 $docker_path/udacity-project4:latest
+docker login &&\
+    docker image tag udacity-project4:1.0.0 $docker_path:latest
 
 # Step 3:
 # Push image to a docker repository
-docker image push $docker_path/udacity-project4:latest
+docker image push $docker_path:latest
